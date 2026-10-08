@@ -11,7 +11,7 @@
 | Version | 1.0 |
 | Status | Defined |
 
-> **Note:** SauceDemo does not provide a formal client SRS for this portfolio project. The requirements below are QA-derived functional requirements based on the application's observed functionality and intended user workflows.
+> **Note:** SauceDemo does not provide a formal client SRS for this portfolio project. The requirements below are QA-derived functional requirements based on the application's observed functionality and intended user workflows. Where specific user accounts have distinct expected behavior, that behavior is captured as a separate requirement.
 
 ---
 
@@ -34,6 +34,7 @@
 |---|---|
 | REQ-007 | Authenticated users shall be able to log out and return to the Login page. |
 | REQ-008 | After logout, users shall not be able to access authenticated pages through browser Back navigation or direct protected URLs. |
+| REQ-009 | Products added to the cart shall persist after the user logs out and logs in again using the same account. |
 
 ---
 
@@ -41,12 +42,12 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-009 | Application shall display available products with relevant product information such as name, image, price, and product action. |
-| REQ-010 | Application shall provide product sorting options including Name A-Z, Name Z-A, Price Low-High, and Price High-Low. |
-| REQ-011 | User shall be able to add a product to the shopping cart from the Products page. |
-| REQ-012 | User shall be able to remove a product from the shopping cart from the Products page. |
-| REQ-013 | Cart indicator shall update according to products added to or removed from the cart. |
-| REQ-014 | User shall be able to open the corresponding Product Details page by selecting either the product image or product title. |
+| REQ-010 | Application shall display available products with relevant product information such as name, image, price, and product action. |
+| REQ-011 | Application shall provide product sorting options including Name A-Z, Name Z-A, Price Low-High, and Price High-Low. |
+| REQ-012 | User shall be able to add a product to the shopping cart from the Products page. |
+| REQ-013 | User shall be able to remove a product from the shopping cart from the Products page. |
+| REQ-014 | The cart indicator shall update correctly when products are added to or removed from the cart from applicable pages, including the Products page and Product Details page. |
+| REQ-015 | User shall be able to open the corresponding Product Details page by selecting either the product image or product title. |
 
 ---
 
@@ -54,13 +55,13 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-015 | User shall be able to open and close the application sidebar menu. |
-| REQ-016 | Sidebar shall provide access to All Items, Dynamic Catalog, About, Logout, and Reset App State options. |
-| REQ-017 | Selecting All Items shall navigate the user to the Products page. |
-| REQ-018 | Selecting Dynamic Catalog shall provide access to its available catalog features. |
-| REQ-019 | Selecting About shall navigate the user to the About page. |
-| REQ-020 | Reset App State shall reset the applicable application state as designed. |
-| REQ-021 | Selecting Logout shall end the current user session and return the user to the Login page. |
+| REQ-016 | User shall be able to open and close the application sidebar menu. |
+| REQ-017 | Sidebar shall provide access to All Items, Dynamic Catalog, About, Logout, and Reset App State options. |
+| REQ-018 | Selecting All Items shall navigate the user to the Products page. |
+| REQ-019 | Selecting Dynamic Catalog shall provide access to its available catalog features. |
+| REQ-020 | Selecting About shall navigate the user to the About page. |
+| REQ-021 | Reset App State shall reset the applicable application state as designed. |
+| REQ-022 | Selecting Logout shall end the current user session and return the user to the Login page. |
 
 ---
 
@@ -68,9 +69,9 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-022 | Lazy Load functionality shall dynamically load additional catalog items as the user scrolls, as designed. |
-| REQ-023 | Spinner functionality shall display the applicable loading indicator during the loading operation and resolve when loading is complete. |
-| REQ-024 | Slider functionality shall allow the user to interact with the slider control and observe the corresponding application behavior. |
+| REQ-023 | Lazy Load functionality shall dynamically load additional catalog items as the user scrolls, as designed. |
+| REQ-024 | Spinner functionality shall display the applicable loading indicator during the loading operation and resolve when loading is complete. |
+| REQ-025 | Slider functionality shall allow the user to interact with the slider control and observe the corresponding application behavior. |
 
 ---
 
@@ -78,10 +79,10 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-025 | Product Details page shall display the selected product's relevant information, including name, image, description, price, and cart action. |
-| REQ-026 | User shall be able to add the selected product to the cart from the Product Details page. |
-| REQ-027 | User shall be able to remove the selected product from the cart from the Product Details page. |
-| REQ-028 | User shall be able to return from Product Details to the Products page. |
+| REQ-026 | Product Details page shall display the selected product's relevant information, including name, image, description, price, and cart action. |
+| REQ-027 | User shall be able to add the selected product to the cart from the Product Details page. |
+| REQ-028 | User shall be able to remove the selected product from the cart from the Product Details page. |
+| REQ-029 | User shall be able to return from Product Details to the Products page. |
 
 ---
 
@@ -89,13 +90,13 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-029 | User shall be able to access and view the shopping cart. |
-| REQ-030 | Cart shall display relevant information for added products, including product name, price, quantity, and available actions. |
-| REQ-031 | User shall be able to remove products from the shopping cart. |
-| REQ-032 | Products added to the cart shall persist when navigating between Products, Product Details, and Cart pages. |
-| REQ-033 | User shall be able to continue shopping from the Cart page and return to the Products page. |
-| REQ-034 | Cart indicator shall reflect the current number of products in the cart. |
-| REQ-035 | Checkout shall not be completed when the shopping cart contains no products. |
+| REQ-030 | User shall be able to access and view the shopping cart. |
+| REQ-031 | Cart shall display relevant information for added products, including product name, price, quantity, and available actions. |
+| REQ-032 | User shall be able to remove products from the shopping cart. |
+| REQ-033 | Products added to the cart shall persist when navigating between Products, Product Details, and Cart pages. |
+| REQ-034 | User shall be able to continue shopping from the Cart page and return to the Products page. |
+| REQ-035 | Cart indicator shall reflect the current number of products in the cart. |
+| REQ-036 | Checkout shall not be completed when the shopping cart contains no products. |
 
 ---
 
@@ -103,14 +104,14 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-036 | User shall be able to access Checkout when the cart contains at least one product. |
-| REQ-037 | Checkout form shall provide First Name, Last Name, and Postal Code fields. |
-| REQ-038 | Required checkout fields shall be validated when mandatory information is missing or invalid. |
-| REQ-039 | User shall be able to proceed to the Order Overview when valid checkout information is provided. |
-| REQ-040 | User shall be able to cancel checkout and return to the appropriate previous page while retaining cart contents. |
-| REQ-041 | Order Overview shall display the products selected for purchase and their relevant pricing information. |
-| REQ-042 | Application shall calculate and display Item Total, Tax, and final Total correctly. |
-| REQ-043 | User shall be able to finish the order when all required conditions are satisfied. |
+| REQ-037 | User shall be able to access Checkout when the cart contains at least one product. |
+| REQ-038 | Checkout form shall provide First Name, Last Name, and Postal Code fields. |
+| REQ-039 | Required checkout fields shall be validated when mandatory information is missing or invalid. |
+| REQ-040 | User shall be able to proceed to the Order Overview when valid checkout information is provided. |
+| REQ-041 | User shall be able to cancel checkout and return to the appropriate previous page while retaining cart contents. |
+| REQ-042 | Order Overview shall display the products selected for purchase and their relevant pricing information. |
+| REQ-043 | Application shall calculate and display Item Total, Tax, and final Total correctly. |
+| REQ-044 | User shall be able to finish the order when all required conditions are satisfied. |
 
 ---
 
@@ -118,11 +119,11 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-044 | User shall be able to submit a valid order successfully. |
-| REQ-045 | Application shall display an order confirmation page after successful order completion. |
-| REQ-046 | Order confirmation page shall display appropriate confirmation information. |
-| REQ-047 | Cart shall be cleared after successful order completion. |
-| REQ-048 | User shall be able to return to the Products page after completing an order. |
+| REQ-045 | User shall be able to submit a valid order successfully. |
+| REQ-046 | Application shall display an order confirmation page after successful order completion. |
+| REQ-047 | Order confirmation page shall display appropriate confirmation information. |
+| REQ-048 | Cart shall be cleared after successful order completion. |
+| REQ-049 | User shall be able to return to the Products page after completing an order. |
 
 ---
 
@@ -130,9 +131,9 @@
 
 | Req ID | Requirement |
 |---|---|
-| REQ-049 | Application shall display the footer with the available footer information and social-media links on applicable pages. |
-| REQ-050 | Social-media links shall navigate to their corresponding external destinations. |
-| REQ-051 | External footer links shall behave as designed when selected by the user. |
+| REQ-050 | Application shall display the footer with the available footer information and social-media links on applicable pages. |
+| REQ-051 | Social-media links shall navigate to their corresponding external destinations. |
+| REQ-052 | External footer links shall behave as designed when selected by the user. |
 
 ---
 
